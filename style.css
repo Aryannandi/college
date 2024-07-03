@@ -10,24 +10,24 @@ Width:100%;
 Height:100%;
 }
 #main {
-    min-height: 100vh;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     position: absolute;
 }
 #topnav {
     height: 16%;
-    width: 100%;
+    min-width: 100%;
     background-color: rgb(16, 16, 16);
     display: flex;
     align-items: center;
     position: absolute;
     justify-content: space-between;
-    gap: 5%;
+    /* gap: 1%; */
     z-index: 1;
 }
 
 h1{
-    font-size: 1.2vw;
+    font-size: 2vh;
     color: aliceblue;
    padding: 2%;
    margin: 1%;
@@ -39,13 +39,13 @@ h1{
 }
 a {
     color: aliceblue;
-    font-size: 1.5vw;
+    font-size: 2vh;
     text-decoration: none;
-    /* margin-right: 8%;  */
 }
 #page1 {
     display: flex;
-    min-height: 100vh;
+    height: 100%;
+    min-width: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.564);
     position: relative;
@@ -63,35 +63,28 @@ a {
 }
 #form{
     position: absolute;
-    bottom: -80%;
+    bottom: -50%;
     /* left: -80%; */
-    width: 30%;
-    border: 10px solid black;
+    width: 40%;
+    border: 1px solid black;
     background-color: rgb(132, 140, 142);
     border-radius: 10px;    
 }
 
 #text{
-    position: absolute;
-    /* bottom: -80%; */
-       
-        right: -10;
+    position: relative;
+    right: 10;
     width: 50%;
-    /* border: 10px solid black; */
-    /* background-color: rgb(132, 140, 142); */
-
-    opacity: 1;
-    border-radius: 60px;
 }
 #page1 p {
-    font-size: 2.5vw; /* You can adjust the font size value as needed */
+    font-size: 2.5vh; /* You can adjust the font size value as needed */
     position: relative;
     font-weight: 900;
     color: #ef7f1a;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 h2{
-    font-size: 4vw;
+    font-size: 4vh;
     position: relative;
     color: rgb(241, 242, 238);
     font-family:  sans-serif;
@@ -100,7 +93,7 @@ h2{
     width: 40%;
     padding: 10px;
     margin: 5px;
-    font-size: 1.2vw;
+    font-size: 2vh;
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.717);
     text-transform: uppercase;
@@ -109,82 +102,107 @@ h2{
 
 .submit-button {
     padding: 10px 20px;
-    font-size: 1.4vw;
+    font-size: 2vh;
     border-radius: 380px;
     background-color: rgba(0, 0, 0, 0.717);
     color: rgb(162, 163, 165);
 }
 #page2{
-    min-height: 100vh;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     background-color: black;
     display: flex;
-    flex-wrap: wrap;
+    white-space: nowrap;
     align-items: center;
    justify-content: space-evenly;
    position: absolute;
+   gap: 10%;
 }
-.box-container {
+#boxcont{
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap; /* Allow boxes to wrap to the next row */
+    display: inline-block;
+    overflow-y:auto ;
+ 
+    /* grid-template-columns: repeat(5, 100px); /* Adjust width as needed */
+    /* gap: 10px; Add spacing between boxes */ 
+    } 
+#boxcont::-webkit-scrollbar{
+    display: none;
 }
-
 .boxes {
-     /* Distribute available space equally among boxes */
-    height: 30%;
-    max-width: 40%; /* Set a maximum width for each box */
+    height: 40vh;
+    width: 25%; 
+    display: inline-block;
     background-color: aliceblue;
-    border-radius: 30px;
-    margin: 4%;
-    padding: 2%; /* Add some padding for spacing */
+    border-radius: 10px;
+    
+    /* margin: 4%;
+    padding: 2%; Add some padding for spacing */
 }
 
 #page2 h3{
-    font-size: 2vw;
+    font-size: 2vh;
 }
 /* #text:hover{
     background-color: aliceblue;
     animation-duration: 1ms;
 } */
+ 
  #cursor{
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
     z-index: 2;
-    height: 300px;
-    width: 300px;
+    height: 100px;
+    width: 100px;
     background-color: aliceblue;
     border-radius: 50%;
     border: 10px solid black;
  }
- /* #blend-text {
-    font-size: 3em;
-    color: white;
-    mix-blend-mode: screen; /* Apply mix-blend-mode for blend effect */
-
+ /* @media screen and (max-width: 600px) {
+    #cursor {
+        display: none;
+    }
+} */
+ 
 #box1 {
     background-image:url(pexels-thisisengineering-3862632.jpg) ;
     object-fit: cover;
+    background-size: cover;
+    /* height: 50%;
+    width: 40%; */
 }
 #box2 {
     background-image:url(pexels-it-3861969.jpg) ;
     object-fit: cover;
+    background-size: cover;
 }
 #box3 {
     background-image:url(premium_photo-1661746658792-f45a2c46ad1b.avif);
+    background-size: cover;
 }
 #box4 {
     background-image: url(pexels-pixabay-279949.jpg);
     object-fit: cover;
+    background-size: cover;
 }
 #box5 {
     background-image: url(photo-1657558045738-21507cf53606.avif);
     object-fit: cover;
+    background-size: cover;
 }
 #box6 {
     background-image:url(pexels-kateryna-babaieva-1423213-2760241.jpg) ;
     object-fit: cover;
+    background-size: cover;
+}@media screen and (max-width: 600px) {
+    #cursor {
+        display: none;
+    }
+}@media screen and (max-width: 1200px) {
+    #cursor {
+        display: none;
+    }
 }

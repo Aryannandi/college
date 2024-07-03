@@ -1,19 +1,17 @@
 gsap.to("#form",{
     bottom:0,
-    height : "50%",
-    width : "30%",
+    height : "45%",
+    // width : "30%",
     duration : 2,
+    delay: "5",
 })
 gsap.to("#text",{
-   left: "50%",
+   right: "-50%",
     duration : 2,
-    // scrollTriger:{
-
-    // }
 })
 gsap.to("#topnav",{
     height : "12%",
-    duration:1,
+    duration:2,
 })
 
 var main = document.querySelector("body")
@@ -23,24 +21,21 @@ main.addEventListener("mousemove", function(a) {
     gsap.to(cursor, {
         x: a.x ,
         y: a.y ,
-        ease: "back.out(2)",
+        ease: "back.out",
     });
     cursor.style.mixBlendMode = "difference";
 });
-text.addEventListener("mouseenter",function(){
+text.addEventListener("mouseenter",function(a){
     gsap.to(cursor,{
-        height:"100px",
-        width:"100px",
+        height:"30px",
+        width:"30px",
        
         ease:"back-out",
     })
 })
-text.addEventListener("mouseleave",function(){
+text.addEventListener("mouseleave",function(a){
     gsap.to(cursor,{
-        height:"300px",
-        width:"300px",
-        // x:a.x -150,
-        // y:a.y-150,
-         ease:"back-out",
+        height:"100px",
+        width:"100px",
     })
 })
