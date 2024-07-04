@@ -13,16 +13,27 @@
     <div id="main">
         <div id="cur">
         <div id="cursor"></div></div> 
-        <div id="topnav">
-            <img src="Designer (9).jpg" alt="">
-            <h1>Naac aceritgrade A++</h1>
-            <h1>skilltech university</h1>
-            <a class="link" href="">nirf</a>
-            <a class="link" href="">brochure</a>
-            <a href="">NAAC</a>
-            <a href="">admission</a> 
-            <a href="">about us</a>
-            </div>
+       <div id="topnav">
+    <img src="Designer (9).jpg" alt="">
+    <ul>
+        <li id="hideonmobile"><a href="#">Careers</a></li>
+        <li id="hideonmobile"><a href="#">nirf</a></li>
+        <li id="hideonmobile"><a href="">brochure</a></li>
+        <li id="hideonmobile"><a href="#">NAAC</a></li>
+        <li id="hideonmobile"><a href="#">admission</a></li> 
+        <li id="hideonmobile"><a href="#">about us</a></li> 
+        <li onclick="showhidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    <ul class="sidebar">
+        <li onclick="hidesidebar()"><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li class="hideonmobile"><a href="#">Careers</a></li>
+        <li class="hideonmobile"><a href="#">nirf</a></li>
+        <li class="hideonmobile"><a href="">brochure</a></li>
+        <li class="hideonmobile"><a href="#">NAAC</a></li>
+        <li class="hideonmobile"><a href="#">admission</a></li> 
+        <li class="hideonmobile"><a href="#">about us</a></li>
+    </ul>
+</div>
             
         </div>
         
@@ -41,7 +52,7 @@
     <input type="text" name="Full Name" placeholder="full name" class="input-field"><br>
     <input type="email" name="email" placeholder="email" class="input-field"><br>
     <input type="number" name="number" placeholder="no." class="input-field"><br>
-    <input type="text" name="state" placeholder="state" class="input-field">
+    <input type="text" name="state" placeholder="state" class="input-field"><br>
     <input type="option" name="" placeholder="qualification" class="input-field">
     <input type="program" name="number" placeholder="no." class="input-field">
     <input type="text" name="" placeholder="interest in" class="input-field">
@@ -51,18 +62,29 @@
            </div>
         
         <div id="page2">
+            <img src="https://media.istockphoto.com/id/1097854158/photo/day-at-the-campus.jpg?s=1024x1024&w=is&k=20&c=VOVI6r2SVfY1CnDwEAH5eLhVSwRAKnK4zFRTJM_hxE4=" alt="">
             <div id="boxcont">
             <div id="box1" class="boxes">
-                <h3>computer science</h3></div>
-            <div id="box2" class="boxes"><h3>information technology</h3></div>
-            <div id="box3" class="boxes"><h3>artifical intelligent and machine learning</h3></div>
-            <div id="box4" class="boxes"><h3>mechanical engirneering</h3></div>
-            <div id="box5" class="boxes"><h3>tony stark engirneering</h3></div>
-            <div id="box6" class="boxes"><h3>electrical engirneering</h3></div>
+                <h3>computer science</h3></div><br>
+            <div id="box2" class="boxes"><h3>information technology</h3></div><br>
+            <div id="box3" class="boxes"><h3>artifical intelligent and machine learning</h3></div><br>
+            <div id="box4" class="boxes"><h3>mechanical engirneering</h3></div><br>
+            <div id="box5" class="boxes"><h3>tony stark engirneering</h3></div><br>
+            <div id="box6" class="boxes"><h3>electrical engirneering</h3></div><br>
         </div></div>
        
     </div>
-    <script src="script.js"></script>
+    <div id="footer"></div>
+    <script src="script.js">
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
     <!-- <script src="<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>"></script> -->
 </body>
 </body>

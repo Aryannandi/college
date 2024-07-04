@@ -6,7 +6,7 @@ Font-family: xyz;
 }
 
 html,body{
-Width:100%;
+min-Width:100vw;
 Height:100%;
 }
 #main {
@@ -15,17 +15,51 @@ Height:100%;
     position: absolute;
 }
 #topnav {
-    height: 16%;
-    min-width: 100%;
+    /* height: 16%; */
+    width: 100%;
     background-color: rgb(16, 16, 16);
     display: flex;
     align-items: center;
-    position: absolute;
-    justify-content: space-between;
-    /* gap: 1%; */
+    position: fixed;
+    justify-content: space-between; 
     z-index: 1;
 }
-
+#topnav ul{
+    /* width: 100%; */
+    list-style: none;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+#topnav li{
+    height: 100%;
+   /* width: 100vw; */
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+.sidebar{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    backdrop-filter: blur(10px);
+    /* background-color: aliceblue; */
+    box-shadow: -10px 0 10px rgb(74, 74, 74);
+    z-index: 10;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
 h1{
     font-size: 2vh;
     color: aliceblue;
@@ -39,8 +73,11 @@ h1{
 }
 a {
     color: aliceblue;
-    font-size: 2vh;
+    font-size: 2.5vh;
     text-decoration: none;
+}
+#topnav a:hover{
+    background-color: rgba(97, 97, 97, 0.466);
 }
 #page1 {
     display: flex;
@@ -68,7 +105,7 @@ a {
     width: 40%;
     border: 1px solid black;
     background-color: rgb(132, 140, 142);
-    border-radius: 10px;    
+    /* border-radius: 10px;     */
 }
 
 #text{
@@ -91,7 +128,7 @@ h2{
 }
 .input-field {
     width: 40%;
-    padding: 10px;
+    padding: 9px;
     margin: 5px;
     font-size: 2vh;
     border-radius: 40px;
@@ -109,45 +146,50 @@ h2{
 }
 #page2{
     min-height: 100%;
-    min-width: 100%;
-    background-color: black;
+    width: 100%;
+    background-color:rgb(38, 42, 86);
     display: flex;
-    white-space: nowrap;
+   
     align-items: center;
-   justify-content: space-evenly;
+   justify-content: center;
    position: absolute;
    gap: 10%;
 }
-#boxcont{
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    overflow-y:auto ;
- 
-    /* grid-template-columns: repeat(5, 100px); /* Adjust width as needed */
-    /* gap: 10px; Add spacing between boxes */ 
-    } 
-#boxcont::-webkit-scrollbar{
-    display: none;
+#page2 img{
+    height: 60vh;
+    width: 25%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
 }
-.boxes {
-    height: 40vh;
-    width: 25%; 
-    display: inline-block;
-    background-color: aliceblue;
-    border-radius: 10px;
+#boxcont{
+    height: 60vh;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     
-    /* margin: 4%;
-    padding: 2%; Add some padding for spacing */
+    background-color: rgba(240, 248, 255, 0);
+   
+    } 
+
+.boxes {
+    height: 16%;
+    width: 100%; 
+
+   
+    border-bottom: 1px solid rgb(13, 13, 13);
+
 }
 
 #page2 h3{
-    font-size: 2vh;
-}
-/* #text:hover{
-    background-color: aliceblue;
-    animation-duration: 1ms;
-} */
+    font-size: 2.8vh;
+    color: rgb(184, 98, 27);
+   
+} 
+
  
  #cursor{
     display: flex;
@@ -161,46 +203,20 @@ h2{
     border-radius: 50%;
     border: 10px solid black;
  }
- /* @media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 600px) {
     #cursor {
         display: none;
     }
-} */
- 
-#box1 {
-    background-image:url(pexels-thisisengineering-3862632.jpg) ;
-    object-fit: cover;
-    background-size: cover;
-    /* height: 50%;
-    width: 40%; */
-}
-#box2 {
-    background-image:url(pexels-it-3861969.jpg) ;
-    object-fit: cover;
-    background-size: cover;
-}
-#box3 {
-    background-image:url(premium_photo-1661746658792-f45a2c46ad1b.avif);
-    background-size: cover;
-}
-#box4 {
-    background-image: url(pexels-pixabay-279949.jpg);
-    object-fit: cover;
-    background-size: cover;
-}
-#box5 {
-    background-image: url(photo-1657558045738-21507cf53606.avif);
-    object-fit: cover;
-    background-size: cover;
-}
-#box6 {
-    background-image:url(pexels-kateryna-babaieva-1423213-2760241.jpg) ;
-    object-fit: cover;
-    background-size: cover;
-}@media screen and (max-width: 600px) {
-    #cursor {
+    .hideonmobile{
         display: none;
     }
+}
+@media screen and (min-width: 600px) {
+        #hideonmobile{
+            display: none;
+        }
 }@media screen and (max-width: 1200px) {
     #cursor {
         display: none;

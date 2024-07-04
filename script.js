@@ -39,3 +39,11 @@ text.addEventListener("mouseleave",function(a){
         width:"100px",
     })
 })
+function showsidebar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'block';
+}
+function hidesidebar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+}
