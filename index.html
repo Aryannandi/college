@@ -11,27 +11,27 @@
 <body>
     
     <div id="main">
-        <div id="cur">
-        <div id="cursor"></div></div> 
+        <div id="cursor"></div> 
        <div id="topnav">
-    <img src="Designer (9).jpg" alt="">
+        
+    <img src="Designer (11).png" alt="">
     <ul>
-        <li id="hideonmobile"><a href="#">Careers</a></li>
-        <li id="hideonmobile"><a href="#">nirf</a></li>
-        <li id="hideonmobile"><a href="">brochure</a></li>
-        <li id="hideonmobile"><a href="#">NAAC</a></li>
-        <li id="hideonmobile"><a href="#">admission</a></li> 
-        <li id="hideonmobile"><a href="#">about us</a></li> 
-        <li onclick="showhidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li><a class="hideonmobile" href="#">Careers</a></li>
+        <li><a class="hideonmobile" href="#">nirf</a></li>
+        <li><a class="hideonmobile" href="">brochure</a></li>
+        <li><a class="hideonmobile" href="#">NAAC</a></li>
+        <li><a class="hideonmobile" href="#">admission</a></li> 
+        <li><a class="hideonmobile" href="#">about us</a></li> 
+        <li  onclick="showsidebar()"><a class="menubutton" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
     <ul class="sidebar">
         <li onclick="hidesidebar()"><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <li class="hideonmobile"><a href="#">Careers</a></li>
-        <li class="hideonmobile"><a href="#">nirf</a></li>
-        <li class="hideonmobile"><a href="">brochure</a></li>
-        <li class="hideonmobile"><a href="#">NAAC</a></li>
-        <li class="hideonmobile"><a href="#">admission</a></li> 
-        <li class="hideonmobile"><a href="#">about us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">nirf</a></li>
+        <li><a href="">brochure</a></li>
+        <li><a href="#">NAAC</a></li>
+        <li><a href="#">admission</a></li> 
+        <li><a href="#">about us</a></li>
     </ul>
 </div>
             
@@ -75,16 +75,7 @@
        
     </div>
     <div id="footer"></div>
-    <script src="script.js">
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'flex';
-        }
-        function hidesidebar(){
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'none';
-        }
-    </script>
+    <script src="script.js"></script>
     <!-- <script src="<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>"></script> -->
 </body>
 </body>

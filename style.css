@@ -12,11 +12,11 @@ Height:100%;
 #main {
     min-height: 100%;
     min-width: 100%;
-    position: absolute;
+    position:absolute;
 }
 #topnav {
-    /* height: 16%; */
-    width: 100%;
+    height: 16%;
+    width: 100%; 
     background-color: rgb(16, 16, 16);
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ Height:100%;
     z-index: 1;
 }
 #topnav ul{
-    /* width: 100%; */
+    width: 100%;
     list-style: none;
     display: flex;
     align-items: end;
@@ -39,13 +39,13 @@ Height:100%;
   align-items: center;
 }
 .sidebar{
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
-    display: flex;
+    display: none;
+    list-style: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start; 
@@ -67,10 +67,11 @@ h1{
    margin: 1%;
 }
 #topnav img {
-    height: 80%;
-    width: 7%;
+    height: 100%;
+    width: 9%;
     margin-left: 3%;
 }
+
 a {
     color: aliceblue;
     font-size: 2.5vh;
@@ -106,12 +107,21 @@ a {
     border: 1px solid black;
     background-color: rgb(132, 140, 142);
     /* border-radius: 10px;     */
-}
+    box-shadow: 5px 5px rgb(74, 74, 74);}
 
 #text{
     position: relative;
-    right: 10;
+    right: 10%;
     width: 50%;
+    top: -10%;
+    text-align: center;
+    align-items: center;
+}
+#text img {
+    height: 10vh;
+    width: 10%;
+    position: relative;
+    object-fit: cover;
 }
 #page1 p {
     font-size: 2.5vh; /* You can adjust the font size value as needed */
@@ -125,6 +135,10 @@ h2{
     position: relative;
     color: rgb(241, 242, 238);
     font-family:  sans-serif;
+    text-align: center;
+}
+#form h2{
+    box-shadow: 5px 5px rgba(32, 32, 32, 0.534); 
 }
 .input-field {
     width: 40%;
@@ -132,9 +146,10 @@ h2{
     margin: 5px;
     font-size: 2vh;
     border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.717);
+    background-color:  rgb(241, 242, 238);
     text-transform: uppercase;
     color: aliceblue;
+    box-shadow: 5px 5px rgba(32, 32, 32, 0.534);
 }
 
 .submit-button {
@@ -143,6 +158,7 @@ h2{
     border-radius: 380px;
     background-color: rgba(0, 0, 0, 0.717);
     color: rgb(162, 163, 165);
+    box-shadow: 5px  5px rgba(32, 32, 32, 0.534);
 }
 #page2{
     min-height: 100%;
@@ -157,7 +173,7 @@ h2{
 }
 #page2 img{
     height: 60vh;
-    width: 25%;
+    width: 45%;
     object-fit: cover;
     object-position: center;
     border-radius: 30px;
@@ -185,7 +201,7 @@ h2{
 }
 
 #page2 h3{
-    font-size: 2.8vh;
+    font-size: 2.3vh;
     color: rgb(184, 98, 27);
    
 } 
@@ -203,21 +219,99 @@ h2{
     border-radius: 50%;
     border: 10px solid black;
  }
+ .menubutton {
+    display: none;
+  }
 
 
 @media screen and (max-width: 600px) {
     #cursor {
         display: none;
+     }
     }
+@media screen and (max-width:900px) {
+    #cursor {
+        display: none;
+     }
     .hideonmobile{
         display: none;
     }
-}
-@media screen and (min-width: 600px) {
-        #hideonmobile{
-            display: none;
+    .menubutton{
+        display: block;
+      }
+    #page2{
+        min-height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #page2 img{
+        height: 70%;
+        width: 70%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 30px;
+        /* bottom: 10px; */
+    }
+    #page2 h3{
+        font-size: 2.3vh;
+        color: rgb(184, 98, 27);
+       } 
+       #boxcont{
+        height: 60vh;
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(240, 248, 255, 0);
+        } 
+        #form{
+            position: absolute;
+            bottom: -50%;
+            height: 20%;
+            /* left: -80%; */
+            width: 70%;
+            border: 1px solid black;
+            background-color: rgb(132, 140, 142);
+            /* border-radius: 10px;     */
+            box-shadow: 5px 5px rgb(74, 74, 74);
         }
-}@media screen and (max-width: 1200px) {
+        #text{
+            position: relative;
+            top: -15%;
+            right: 10%;
+            width: 60%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        #page1 p {
+            font-size: 1.5vh; /* You can adjust the font size value as needed */
+            position: relative;
+            font-weight: 900;
+            color: #ef7f1a;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h2{
+            font-size: 2vh;
+            position: relative;
+            color: rgb(241, 242, 238);
+            font-family:  sans-serif;
+            text-align: center;
+        }
+        #topnav img {
+         width: 20%;
+        }
+        #topnav ul {
+            width: 20%;
+        }
+}
+@media screen and (max-width: 1200px) {
     #cursor {
         display: none;
     }
