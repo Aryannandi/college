@@ -15,6 +15,7 @@ gsap.to("#topnav",{
 })
 const sidebar = document.querySelector('.sidebar')
 sidebar.style.display = "none";
+sidebar.style.width="70%";
 var main = document.querySelector("body")
 var cursor = document.querySelector("#cursor")
 var text = document.querySelector("#form")
