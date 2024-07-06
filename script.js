@@ -1,3 +1,15 @@
+
+gsap.to("#page1", {
+    backgroundColor: "rgb(38, 42, 86)",
+    scrollTrigger: {
+        trigger: "#main",
+        scroller: "body",
+        // markers: true,
+        start: "7%",
+        end: "100vh",
+        scrub: 1,
+    }
+});
 gsap.to("#form",{
     bottom:0,
     height : "47%",
@@ -13,6 +25,16 @@ gsap.to("#topnav",{
     height : "12%",
     duration:2,
 })
+gsap.to("#topnav", {
+    backgroundColor: "rgb(38, 42, 86)",
+    scrollTrigger: {
+        trigger: "#main",
+        scroller: "body",
+        start: "top -50vh",
+        end: "top -100vh",
+        scrub: 1
+    }
+});
 const sidebar = document.querySelector('.sidebar')
 sidebar.style.display = "none";
 sidebar.style.width="70%";
@@ -57,3 +79,5 @@ function hidesidebar(){
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'none';
 }
+gsap.registerPlugin(ScrollTrigger);
+

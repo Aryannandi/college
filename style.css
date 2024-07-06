@@ -10,8 +10,8 @@ min-Width:100vw;
 Height:100%;
 }
 #main {
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
     position:absolute;
 }
 #topnav {
@@ -146,7 +146,7 @@ h2{
     margin: 5px;
     font-size: 2vh;
     border-radius: 40px;
-    background-color:  rgb(241, 242, 238);
+    background-color:  rgb(47, 47, 46);
     text-transform: uppercase;
     color: aliceblue;
     box-shadow: 5px 5px rgba(32, 32, 32, 0.534);
@@ -165,18 +165,20 @@ h2{
     width: 100%;
     background-color:rgb(38, 42, 86);
     display: flex;
-   
-    align-items: center;
+   align-items: center;
    justify-content: center;
-   position: absolute;
-   gap: 10%;
-}
+   /* position: absolute; */
+    gap: 10%;
+} 
 #page2 img{
+  
     height: 60vh;
-    width: 45%;
+    width: 40%;
     object-fit: cover;
     object-position: center;
     border-radius: 30px;
+    /* z-index: 1; */
+    /* opacity: 0.7; */
 }
 #boxcont{
     height: 60vh;
@@ -186,18 +188,13 @@ h2{
     align-items: center;
     justify-content: center;
     text-align: center;
-    
     background-color: rgba(240, 248, 255, 0);
-   
     } 
 
 .boxes {
     height: 16%;
     width: 100%; 
-
-   
     border-bottom: 1px solid rgb(13, 13, 13);
-
 }
 
 #page2 h3{
@@ -205,8 +202,6 @@ h2{
     color: rgb(184, 98, 27);
    
 } 
-
- 
  #cursor{
     display: flex;
     align-items: center;
@@ -222,7 +217,15 @@ h2{
  .menubutton {
     display: none;
   }
-
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
 @media screen and (max-width: 600px) {
     #cursor {
